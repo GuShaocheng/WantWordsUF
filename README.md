@@ -11,12 +11,19 @@
 * conda install -y uWSGI
 
 ## Model preparation
-download modes and decompressed files (see below). PS: only keep files not folders.
+Download modes and decompress files (see below). PS: only keep files not folders.
 
 ## Run
-* python manage.py migrate
+* conda activate wantswordUF
+* python manage.py migrate (only for the first time)
 * python manage.py runserver
 * open localhost:8000 in a browser
+
+## Baidu API
+API for Chinese to English and English to Chinese is needed.
+* WantWordsUF/website_RD/views.py
+* appid = '201**************79'
+* secretKey = 'Kmb0***********'
 
 ## Original readme
 <p align="center">

@@ -1,4 +1,30 @@
 ### 中|[En](README.md)
+<p>斯库用以本地部署<a href="https://wantwords.net/">WANTWORDS</a>.</p>
+<p>代码略有改动,以便本地(Ubuntun 22.04)安装及测试.</p>
+
+## 安装
+* git clone xxx
+* cd wantswordUF
+* conda create -y --name wantswordUF python=3.9.19
+* conda activate wantswordUF
+* pip install --no-cache-dir -r requirements.txt
+* conda install -y uWSGI
+
+## 模型准备
+Download modes and decompress files (see below). PS: only keep files not folders.
+
+## 运行
+* conda activate wantswordUF
+* python manage.py migrate (only for the first time)
+* python manage.py runserver
+* open localhost:8000 in a browser
+
+## 百度接口 API
+API for Chinese to English and English to Chinese is needed.
+* WantWordsUF/website_RD/views.py
+* appid = '201**************79'
+* secretKey = 'Kmb0***********'
+
 <p align="center">
   <a href="https://wantwords.thunlp.org/">
   	<img src="resources/wantwords_logo.svg" width = "300"  alt="WantWords Logo"/>
